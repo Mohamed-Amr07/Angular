@@ -1,0 +1,38 @@
+<!-- <div class="bg-dark p-5 text-light text-center">
+  <div class="container">
+    <h2>Our Products</h2>
+    <div class="row">
+        <app-product-item  *ngFor="let product of products" [myProduct]="product" class="card col-3 text-dark mt-3"></app-product-item>
+    </div>
+  </div>
+</div> -->
+/////////////////////
+<div class="mt-5">
+  <div class="container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Product Name</th>
+          <th scope="col">Price</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of allProduct">
+          <th scope="row">{{product.id}}</th>
+          <td><a [routerLink]="['/products',product.id]">{{product.productName}}</a></td>
+          <td>{{product.price}}</td>
+          <td>{{product.quantity}}</td>
+          <td>
+            <i class=" text-info fs-2 mx-2 bi bi-pencil-square" [routerLink]="['/product',product.id,'edit']"></i>
+            <i class="text-danger fs-2 mx-2 bi bi-trash3-fill" (cl
+            ick)="deleteProduct(product.id)"></i>
+            <i class="text-warning fs-2 mx-2 bi bi-eye-fill" routerLink="/products/{{product.id}}"></i>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

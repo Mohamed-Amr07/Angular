@@ -1,0 +1,34 @@
+<!-- <div class="p-5 text-light bg-dark text-center">
+  <div class="container">
+    <h2>{{TitleData}}</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, ab. Cum sunt accusamus commodi, quas iure, rerum culpa tempore aliquam est maiores ipsa dolore sequi tempora velit dolorum? Obcaecati, odit.</p>
+    <h2 class="text-danger">Result: {{ LoginData }}</h2>
+  </div>
+</div> -->
+<div class="container mt-5">
+  <form class="bg-light p-4" (submit)="login()">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label" >User Name</label>
+      <input
+      type="text"
+      name='username'
+      class="form-control"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp plc"
+      placeholder="Enter Your Name"
+      [(ngModel)]="userName">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label" >Password</label>
+      <input
+      type="password"
+      name="password"
+      class="form-control"
+      id="exampleInputPassword1"
+      placeholder="Enter Your Password"
+      [(ngModel)]="password">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Login</button>
+  </form>
+</div>

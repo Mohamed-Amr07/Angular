@@ -1,0 +1,114 @@
+<p>todo works!</p>
+<div class="bg-light p-5 text-center">
+  <h2>Todo Component</h2>
+  <div [ngSwitch]="color">
+    <p *ngSwitchCase="'Red'" class="text-danger">You selected Red</p>
+    <p *ngSwitchCase="'Green'" class="text-success">You selected Green</p>
+    <p *ngSwitchCase="'Blue'" class="text-warning">You selected Blue</p>
+    <p *ngSwitchDefault class="text-muted">You didn't select any Color</p>
+  </div>
+</div>
+
+
+<div class="bg-light p-5 text-center fs-3">
+  <h2>ITI Branches</h2>
+  <select [(ngModel)]="selectValue">
+    <option>Smart</option>
+    <option>Alex</option>
+    <option>New Capital</option>
+    <option>Menofia</option>
+  </select>
+  <h2 class="mt-3 bg-dark text-light p-2 rounded">Available Tracks</h2>
+  <div [ngSwitch]="selectValue">
+    <div *ngSwitchCase="'Smart'">
+      <ul>
+        <li>A.I.</li>
+        <li>Data Science</li>
+        <li>Open Source</li>
+        <li>.Net</li>
+        <li>Testing</li>
+      </ul>
+    </div>
+
+    <div *ngSwitchCase="'Alex'">
+      <ul>
+        <li>A.I.</li>
+        <li>Open Source</li>
+        <li>.Net</li>
+        <li>Testing</li>
+      </ul>
+    </div>
+
+    <div *ngSwitchCase="'New Capital'">
+      <ul>
+        <li>A.I.</li>
+        <li>Open Source</li>
+        <li>.Net</li>
+      </ul>
+    </div>
+
+    <div *ngSwitchCase="'Menofia'">
+      <ul>
+        <li>A.I.</li>
+        <li>Open Source</li>
+        <li>.Net</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- <div class="bg-light p-5 text-center fs-3">
+  <h2>ITI Branches</h2>
+  <select [(ngModel)]="selectValue">
+    <option>Smart</option>
+    <option>Menofia</option>
+    <option>Alex</option>
+    <option>Mansoura</option>
+    <option>New Capital</option>
+  </select>
+
+  <h2 class="mt-3 bg-dark text-light p-2 rounded">Available Tracks</h2>
+  <div [ngSwitch]="selectValue">
+    <div *ngSwitchCase="'Smart'">
+      <ul>
+        <li>Data Science</li>
+        <li>A.I.</li>
+        <li>.Net</li>
+        <li>Cloud</li>
+      </ul>
+    </div>
+
+    <div *ngSwitchCase="'Menofia'">
+      <ul>
+        <li>Open Source</li>
+        <li>A.I.</li>
+        <li>.Net</li>
+      </ul>
+    </div>
+
+    <div *ngSwitchCase="'Alex'">
+      <ul>
+        <li>Open Source</li>
+        <li>A.I.</li>
+        <li>.Net</li>
+        <li>Cloud</li>
+      </ul>
+    </div>
+
+    <div *ngSwitchCase="'Mansoura'">
+      <ul>
+        <li>A.I.</li>
+        <li>.Net</li>
+        <li>Open Source</li>
+      </ul>
+    </div>
+
+    <div *ngSwitchCase="'New Capital'">
+      <ul>
+        <li>A.I.</li>
+        <li>.Net</li>
+        <li>Open Source</li>
+        <li>Data Science</li>
+      </ul>
+    </div>
+  </div>
+</div> -->

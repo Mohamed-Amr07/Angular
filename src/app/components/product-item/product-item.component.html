@@ -1,0 +1,23 @@
+  <img src="{{myProduct?.imgUrl}}" class="card-img-top" alt="{{myProduct?.productName}}">
+  <div class="card-body">
+    <h5 class="card-title">{{myProduct?.productName}}</h5>
+    <p class="card-text">
+      Price : <strong>{{myProduct?.price | currency : "L.E."}}</strong>
+    </p>
+    <div [ngSwitch]="myProduct?.quantity">
+      <p *ngSwitchCase="0" class="fs-1 text-danger fw-bold">
+        There is no more pieces
+      </p>
+      <p *ngSwitchCase="1" class="fs-1 text-warning fw-bold">
+        Only one piece is left
+      </p>
+      <p *ngSwitchDefault class="text-success fw-bold">
+        Quantity : {{myProduct?.quantity}}
+      </p>
+    </div>
+    <a [ngClass]="{
+      btn:true,
+      'btn-success':myProduct?.quantity != 0,
+      'btn-danger':myProduct?.quantity === 0}">
+      {{myProduct?.quantity === 0 ? 'Solid Out' : 'Buy Now!'}}</a>
+  </div>

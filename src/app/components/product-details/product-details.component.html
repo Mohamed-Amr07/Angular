@@ -1,0 +1,22 @@
+<div class="bg-dark p-5 mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <img [src]="this.product?.imgUrl" alt="">
+      </div>
+      <div class="col-sm-6 text-center text-light lead">
+        <h1 class="text-danger">Product Name : {{this.product?.productName}}</h1>
+        <p>Quantity : {{this.product?.quantity}}</p>
+        <p>Price : <strong>{{this.product?.price | currency }}</strong></p>
+        <div>
+          <i class="bi bi-star-fill text-warning"></i>
+          <i class="bi bi-star-fill text-warning"></i>
+          <i class="bi bi-star-fill text-warning"></i>
+          <i class="bi bi-star-fill text-warning"></i>
+          <i class="bi bi-star-fill"></i>
+        </div>
+        <button class="btn btn-warning mt-5" [routerLink]="'/products'">Back To Products</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="container mt-5">
+  <form [formGroup]="productForm" (submit)="submitForm($event)">
+    <div class="mb-3">
+      <label for="productName" class="form-label" name="productName">Product Name</label>
+      <input formControlName="productName" type="text" class="form-control" id="productName" aria-describedby="emailHelp" placeholder="Enter Product Name">
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+      <label for="price" class="form-label">Price</label>
+      <input formControlName="productPrice" type="number" class="form-control" id="price"  placeholder="Enter Product Price">
+    </div>
+    <div class="mb-3">
+      <label for="quantity" class="form-label" placeholder="Enter Product Quantity">Quantity</label>
+      <input formControlName="productQuantity" type="number" class="form-control" id="quantity">
+    </div>
+    <div class="mb-3">
+      <label for="Image" class="form-label"  placeholder="Enter Product Image">Image</label>
+      <input formControlName="productImage" type="image" class="form-control" id="Image">
+    </div>
+    <button type="submit" class="btn btn-primary">{{productId? 'Edit Product' : 'Add Product'}}</button>
+  </form>
+</div>
